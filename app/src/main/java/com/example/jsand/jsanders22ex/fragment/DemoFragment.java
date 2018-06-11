@@ -29,7 +29,7 @@ public class DemoFragment extends Fragment {
     public List<String> list = new ArrayList<String>();
     public MainListAdapter adapter;
     private ListView listView;
-
+//commit test
     public DemoFragment()
     {
         list.add("LaunchMode");
