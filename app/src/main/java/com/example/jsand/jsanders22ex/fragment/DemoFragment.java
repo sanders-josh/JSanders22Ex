@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.jsand.jsanders22ex.R;
+import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
@@ -112,6 +113,9 @@ public class DemoFragment extends Fragment {
                         break;
                     case 5:
                         intent.setClass(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
+                    case 6:
+                        intent.setClass(getActivity(), AdvancedListViewActivity.class);
                         startActivity(intent);
                     default:
                 }
