@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.jsand.jsanders22ex.R;
+import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
 import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
@@ -38,7 +39,7 @@ public class DemoFragment extends Fragment {
         list.add("SimpleViewPager");
         list.add("9Patch");
         list.add("ScaleType");
-        list.add("E");
+        list.add("Intent&Bundle");
         list.add("F");
         list.add("G");
         list.add("H");
@@ -88,6 +89,12 @@ public class DemoFragment extends Fragment {
                         break;
                     case 3:
                         intent.setClass(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.setClass(getActivity(), IntentAndBundleActivity.class);
+                        intent.putExtra("Msg", "Say Hello!");
+                        intent.putExtra("No", 10);
                         startActivity(intent);
                         break;
                     default:
