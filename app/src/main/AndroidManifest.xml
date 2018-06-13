@@ -32,7 +32,8 @@
             android:launchMode="singleTop" />
         <activity android:name=".activity.NinePatchActivity" />
         <activity android:name=".activity.ScaleTypeActivity" />
-        <activity android:name=".activity.IntentAndBundleActivity"></activity>
+        <activity android:name=".activity.IntentAndBundleActivity" />
+        <activity android:name=".activity.NotificationActivity"></activity>
     </application>
 
 </manifest>

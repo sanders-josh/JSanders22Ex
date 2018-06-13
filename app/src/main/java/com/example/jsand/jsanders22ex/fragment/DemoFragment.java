@@ -14,6 +14,7 @@ import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
+import com.example.jsand.jsanders22ex.activity.NotificationActivity;
 import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
@@ -41,9 +42,13 @@ public class DemoFragment extends Fragment {
         list.add("9Patch");
         list.add("ScaleType");
         list.add("Intent&Bundle");
-        list.add("F");
-        list.add("G");
-        list.add("H");
+        list.add("Notification");
+        list.add("AdvancedListView");
+        list.add("AdvancedViewPager");
+        list.add("RadioGroup");
+        list.add("CheckBox");
+        list.add("CheckBox");
+        list.add("Dialogs");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -105,6 +110,9 @@ public class DemoFragment extends Fragment {
                         intent.putExtra("B",bundle);
                         startActivity(intent);
                         break;
+                    case 5:
+                        intent.setClass(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
                     default:
                 }
             }
