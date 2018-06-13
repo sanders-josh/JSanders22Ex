@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jsand.jsanders22ex.R;
+import com.example.jsand.jsanders22ex.bean.Base;
 
 public class IntentAndBundleActivity extends AppCompatActivity {
 
@@ -18,12 +19,12 @@ public class IntentAndBundleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intent_and_bundle);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("B");
+        Base newBase = (Base) bundle.getSerializable("Base");
         String bundle_msg = bundle.getString("B_Msg");
         int number = intent.getIntExtra("No",0);
         String msg = intent.getStringExtra("Msg");
         Toast.makeText(this, String.valueOf(number), Toast.LENGTH_SHORT).show();
         textview = findViewById(R.id.intent_textview);
-        textview.setText(bundle_msg);
-
+        textview.setText(newBase.getName());
     }
 }

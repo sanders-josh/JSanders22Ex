@@ -18,6 +18,7 @@ import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
 import com.example.jsand.jsanders22ex.adapter.ScaleTypeAdapter;
+import com.example.jsand.jsanders22ex.bean.Base;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,9 +96,12 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), IntentAndBundleActivity.class);
                         intent.putExtra("Msg", "Say Hello!");
                         intent.putExtra("No", 10);
+                        Base newBase = new Base();
+                        newBase.setName("Josh");
                         Bundle bundle = new Bundle();
                         bundle.putInt("B_Msg",100);
                         bundle.putString("B_Msg","FromBundle");
+                        bundle.putSerializable("Base",newBase);
                         intent.putExtra("B",bundle);
                         startActivity(intent);
                         break;
