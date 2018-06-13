@@ -95,6 +95,10 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), IntentAndBundleActivity.class);
                         intent.putExtra("Msg", "Say Hello!");
                         intent.putExtra("No", 10);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("B_Msg",100);
+                        bundle.putString("B_Msg","FromBundle");
+                        intent.putExtra("B",bundle);
                         startActivity(intent);
                         break;
                     default:

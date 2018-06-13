@@ -17,11 +17,13 @@ public class IntentAndBundleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent_and_bundle);
         Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("B");
+        String bundle_msg = bundle.getString("B_Msg");
         int number = intent.getIntExtra("No",0);
         String msg = intent.getStringExtra("Msg");
         Toast.makeText(this, String.valueOf(number), Toast.LENGTH_SHORT).show();
         textview = findViewById(R.id.intent_textview);
-        textview.setText(msg);
+        textview.setText(bundle_msg);
 
     }
 }
