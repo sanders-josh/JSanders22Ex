@@ -30,7 +30,8 @@
         <activity
             android:name=".activity.SingleTopActivity"
             android:launchMode="singleTop" />
-        <activity android:name=".activity.NinePatchActivity"></activity>
+        <activity android:name=".activity.NinePatchActivity" />
+        <activity android:name=".activity.ScaleTypeActivity"></activity>
     </application>
 
 </manifest>

@@ -13,8 +13,10 @@ import android.widget.ListView;
 import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
+import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
+import com.example.jsand.jsanders22ex.adapter.ScaleTypeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +37,7 @@ public class DemoFragment extends Fragment {
         list.add("LaunchMode");
         list.add("SimpleViewPager");
         list.add("9Patch");
-        list.add("D");
+        list.add("ScaleType");
         list.add("E");
         list.add("F");
         list.add("G");
@@ -82,6 +84,10 @@ public class DemoFragment extends Fragment {
                         break;
                     case 2:
                         intent.setClass(getActivity(), NinePatchActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.setClass(getActivity(), ScaleTypeActivity.class);
                         startActivity(intent);
                         break;
                     default:
