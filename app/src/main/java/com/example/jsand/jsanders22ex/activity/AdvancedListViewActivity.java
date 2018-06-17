@@ -2,6 +2,8 @@ package com.example.jsand.jsanders22ex.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.jsand.jsanders22ex.R;
@@ -20,7 +22,8 @@ public class AdvancedListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advanced_list_view);
-        listView = findViewById(R.id.advanced_listview);
+
+        View view = getLayoutInflater().inflate(R.layout.listview_header, null);
 
         list.add("Hello!");
         list.add("Hi");
@@ -29,5 +32,7 @@ public class AdvancedListViewActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.advanced_listview);
         adapter = new AdvancedListAdapter(this,list);
+        listView.setAdapter(adapter);
+        listView.addHeaderView(view);
     }
 }
