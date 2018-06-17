@@ -104,6 +104,7 @@ public class DemoFragment extends Fragment {
                         intent.putExtra("No", 10);
                         Base newBase = new Base();
                         newBase.setName("Josh");
+                        newBase.setAge(26);
                         Bundle bundle = new Bundle();
                         bundle.putInt("B_Msg",100);
                         bundle.putString("B_Msg","FromBundle");
@@ -114,9 +115,11 @@ public class DemoFragment extends Fragment {
                     case 5:
                         intent.setClass(getActivity(), NotificationActivity.class);
                         startActivity(intent);
+                        break;
                     case 6:
                         intent.setClass(getActivity(), AdvancedListViewActivity.class);
                         startActivity(intent);
+                        break;
                     default:
                 }
             }
