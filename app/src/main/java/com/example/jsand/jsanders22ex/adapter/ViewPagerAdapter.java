@@ -30,7 +30,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     public void updateList(ArrayList<Fragment> list)
     {
-        this.fragmentList = fragmentList;
+        this.fragmentList = list;
         notifyDataSetChanged();
     }
 }

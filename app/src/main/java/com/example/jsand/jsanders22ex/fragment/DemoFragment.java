@@ -11,10 +11,16 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.jsand.jsanders22ex.R;
+import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
+import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
+import com.example.jsand.jsanders22ex.activity.NotificationActivity;
+import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
+import com.example.jsand.jsanders22ex.adapter.ScaleTypeAdapter;
+import com.example.jsand.jsanders22ex.bean.Base;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,11 +41,15 @@ public class DemoFragment extends Fragment {
         list.add("LaunchMode");
         list.add("SimpleViewPager");
         list.add("9Patch");
-        list.add("D");
-        list.add("E");
-        list.add("F");
-        list.add("G");
-        list.add("H");
+        list.add("ScaleType");
+        list.add("Intent&Bundle");
+        list.add("Notification");
+        list.add("AdvancedListView");
+        list.add("AdvancedViewPager");
+        list.add("RadioGroup");
+        list.add("CheckBox");
+        list.add("CheckBox");
+        list.add("Dialogs");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -82,6 +92,32 @@ public class DemoFragment extends Fragment {
                         break;
                     case 2:
                         intent.setClass(getActivity(), NinePatchActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent.setClass(getActivity(), ScaleTypeActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.setClass(getActivity(), IntentAndBundleActivity.class);
+                        intent.putExtra("Msg", "Say Hello!");
+                        intent.putExtra("No", 10);
+                        Base newBase = new Base();
+                        newBase.setName("Josh");
+                        newBase.setAge(26);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("B_Msg",100);
+                        bundle.putString("B_Msg","FromBundle");
+                        bundle.putSerializable("Base",newBase);
+                        intent.putExtra("B",bundle);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.setClass(getActivity(), NotificationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 6:
+                        intent.setClass(getActivity(), AdvancedListViewActivity.class);
                         startActivity(intent);
                         break;
                     default:
