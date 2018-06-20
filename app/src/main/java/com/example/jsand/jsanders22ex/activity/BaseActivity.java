@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity
 {
+    private Toast toast;
+
     public void startActivity(@NonNull Class<?> cls)
     {
         Intent intent = new Intent();
@@ -24,11 +26,13 @@ public class BaseActivity extends AppCompatActivity
 
     public void toastShort(String msg)
     {
-        Toast.makeText(this, msg,Toast.LENGTH_SHORT);
+        toast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void toastLong(String msg)
     {
-        Toast.makeText(this,msg,Toast.LENGTH_LONG);
+        toast = Toast.makeText(this,msg,Toast.LENGTH_LONG);
+        toast.show();
     }
 }

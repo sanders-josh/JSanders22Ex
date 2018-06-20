@@ -29,6 +29,11 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         fragmentList.add(new DemoFragment());
         fragmentList.add(new WorkFragment());
+        fragmentList.add(new WorkFragment());
+        fragmentList.add(new WorkFragment());
+        fragmentList.add(new WorkFragment());
+        fragmentList.add(new WorkFragment());
+        fragmentList.add(new WorkFragment());
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(adapter);

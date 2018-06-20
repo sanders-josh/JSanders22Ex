@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DialogueActivity">
+
+    <RadioGroup
+        android:id="@+id/dialogue_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/dialoge_normal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"></RadioButton>
+
+        <RadioButton
+        android:id="@+id/dialoge_list"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioButton>
+
+        <RadioButton
+        android:id="@+id/dialoge_single_choice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioButton>
+
+        <RadioButton
+        android:id="@+id/dialoge_multi_choice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioButton>
+
+        <RadioButton
+        android:id="@+id/dialoge_Waiting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioButton>
+
+        <RadioButton
+        android:id="@+id/dialoge_Progress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioButton>
+
+        <RadioGroup
+        android:id="@+id/dialoge_Input"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></RadioGroup>
+
+        <RadioButton
+            android:id="@+id/dialogue_custom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Custom"
+            android:textSize="26sp"></RadioButton>
+
+        <Button
+            android:id="@+id/dialoge_Submit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Submit"
+            android:textSize="26sp"/>
+    </RadioGroup>
+
+</LinearLayout>

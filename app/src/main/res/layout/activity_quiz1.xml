@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Quiz1Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="This fragment is used for quizes!"
+            android:background="@android:color/holo_blue_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <Button
+                android:id="@+id/activity_quiz1_quiz1_button"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:textSize="26sp"
+                android:text="Quiz1" />
+
+            <Button
+                android:id="@+id/activity_quiz1_quiz2_button"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:textSize="26sp"
+                android:text="Quiz2"/>
+
+            <Button
+                android:id="@+id/activity_quiz1_quiz3_button"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:textSize="26sp"
+                android:text="Quiz3"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/work_button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="2dp"
+            android:textSize="26sp"
+            android:text="Submit"
+            android:gravity="center"
+            android:background="@drawable/work_button_submit" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textSize="26dp"
+        android:text="You can do it!"
+        android:background="@android:color/holo_blue_light"/>
+
+</RelativeLayout>

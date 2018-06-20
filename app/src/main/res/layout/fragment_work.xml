@@ -6,11 +6,9 @@
     tools:context=".fragment.WorkFragment"
     android:background="@android:color/holo_green_light">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="hello_work_fragment" />
-
+        android:text="Work Fragmet"/>
 </FrameLayout>
