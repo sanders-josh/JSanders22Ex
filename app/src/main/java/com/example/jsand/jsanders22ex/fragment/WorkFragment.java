@@ -3,6 +3,7 @@ package com.example.jsand.jsanders22ex.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.example.jsand.jsanders22ex.MainActivity;
 import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.Quiz1Activity;
+import com.example.jsand.jsanders22ex.activity.Quiz2Activity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
 
 import java.util.ArrayList;
@@ -27,19 +29,9 @@ import butterknife.OnClick;
 
 public class WorkFragment extends Fragment
 {
-    List<String> list = new ArrayList<String>();
-    MainListAdapter adapter;
-    private ListView listView;
-
-    public WorkFragment()
-    {
-//        list.add("Quiz1");
-    }
-
-    public static WorkFragment newInstance(String param1, String param2) {
-        WorkFragment fragment = new WorkFragment();
-        return fragment;
-    }
+    private Button Quiz1;
+    private Button Quiz2;
+    private Button Quiz3;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -76,11 +68,35 @@ public class WorkFragment extends Fragment
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_work, container, false);
-//        Intent intent = new Intent();
-//        intent.setClass(getActivity(), Quiz1Activity.class);
-//        startActivity(intent);
         return view;
+    }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState)
+    {
+        Quiz1 = getView().findViewById(R.id.fragment_work_quiz1_button);
+        Quiz2 = getView().findViewById(R.id.fragment_work_quiz2_button);
+        Quiz3 = getView().findViewById(R.id.fragment_work_quiz3_button);
+
+        Quiz1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(getContext(), "Quiz 1", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Quiz2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), Quiz2Activity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

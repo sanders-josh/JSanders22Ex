@@ -96,11 +96,11 @@ public class DemoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_demo, container, false);
+
         listView = view.findViewById(R.id.main_demo_listview);
         adapter = new MainListAdapter(getContext(), list);
         listView.setAdapter(adapter);
-//        View headerView = new View(getActivity());
-//        listView.addHeaderView(headerView);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             Intent intent = new Intent();

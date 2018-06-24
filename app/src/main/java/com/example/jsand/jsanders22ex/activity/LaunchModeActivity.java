@@ -16,7 +16,8 @@ public class LaunchModeActivity extends AppCompatActivity {
     private Button singleInstance;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_mode);
 
@@ -25,36 +26,44 @@ public class LaunchModeActivity extends AppCompatActivity {
         singleTask = findViewById(R.id.launch_singletask_button);
         singleInstance = findViewById(R.id.launch_singleinstance_button);
 
-        standard.setOnClickListener(new View.OnClickListener() {
+        standard.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent();
                 intent.setClass(LaunchModeActivity.this, StandardActivity.class);
                 startActivity(intent);
             }
         });
 
-        singleTop.setOnClickListener(new View.OnClickListener() {
+        singleTop.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v){
+            public void onClick(View v)
+            {
                 Intent intent = new Intent();
                 intent.setClass(LaunchModeActivity.this, SingleTopActivity.class);
                 startActivity(intent);
             }
         });
 
-        singleTask.setOnClickListener(new View.OnClickListener() {
+        singleTask.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v){
+            public void onClick(View v)
+            {
                 Intent intent = new Intent();
                 intent.setClass(LaunchModeActivity.this, SingleTaskActivity.class);
                 startActivity(intent);
             }
         });
 
-        singleInstance.setOnClickListener(new View.OnClickListener() {
+        singleInstance.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v){
+            public void onClick(View v)
+            {
                 Intent intent = new Intent();
                 intent.setClass(LaunchModeActivity.this, SingleInstanceActivity.class);
                 startActivity(intent);
