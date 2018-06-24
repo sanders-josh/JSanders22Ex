@@ -16,7 +16,7 @@ import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.AdvancedViewPagerActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
-import com.example.jsand.jsanders22ex.activity.DialogueActivity;
+import com.example.jsand.jsanders22ex.activity.DialogActivity;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
@@ -25,7 +25,6 @@ import com.example.jsand.jsanders22ex.activity.RadioGroupActivity;
 import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
-import com.example.jsand.jsanders22ex.adapter.ScaleTypeAdapter;
 import com.example.jsand.jsanders22ex.bean.Base;
 
 import java.util.ArrayList;
@@ -159,7 +158,7 @@ public class DemoFragment extends Fragment {
                         ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
                         break;
                     case 10:
-                        ((MainActivity)getActivity()).startActivity(DialogueActivity.class);
+                        ((MainActivity)getActivity()).startActivity(DialogActivity.class);
                         break;
                     default:
                 }

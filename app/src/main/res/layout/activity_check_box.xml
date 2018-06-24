@@ -29,6 +29,8 @@
     <Button
         android:id="@+id/check_submit"
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="60dp"
+        android:text="Submit"
+        android:textSize="26sp"/>
 
 </LinearLayout>

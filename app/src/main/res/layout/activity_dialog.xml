@@ -5,57 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.DialogueActivity">
+    tools:context=".activity.DialogActivity">
 
     <RadioGroup
-        android:id="@+id/dialogue_radiogroup"
+        android:id="@+id/dialog_radiogroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/dialoge_normal"
+            android:id="@+id/dialog_normal"
             android:layout_width="match_parent"
             android:layout_height="60dp"></RadioButton>
 
         <RadioButton
-        android:id="@+id/dialoge_list"
+        android:id="@+id/dialog_list"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioButton>
 
         <RadioButton
-        android:id="@+id/dialoge_single_choice"
+        android:id="@+id/dialog_single_choice"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioButton>
 
         <RadioButton
-        android:id="@+id/dialoge_multi_choice"
+        android:id="@+id/dialog_multi_choice"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioButton>
 
         <RadioButton
-        android:id="@+id/dialoge_Waiting"
+        android:id="@+id/dialog_Waiting"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioButton>
 
         <RadioButton
-        android:id="@+id/dialoge_Progress"
+        android:id="@+id/dialog_Progress"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioButton>
 
         <RadioGroup
-        android:id="@+id/dialoge_Input"
+        android:id="@+id/dialog_Input"
         android:layout_width="match_parent"
         android:layout_height="60dp"></RadioGroup>
 
         <RadioButton
-            android:id="@+id/dialogue_custom"
+            android:id="@+id/dialog_custom"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Custom"
             android:textSize="26sp"></RadioButton>
 
         <Button
-            android:id="@+id/dialoge_Submit"
+            android:id="@+id/dialog_submit"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Submit"

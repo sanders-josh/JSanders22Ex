@@ -40,7 +40,7 @@
         <activity android:name=".activity.AdvancedViewPagerActivity" />
         <activity android:name=".activity.RadioGroupActivity" />
         <activity android:name=".activity.CheckBoxActivity" />
-        <activity android:name=".activity.DialogueActivity"></activity>
+        <activity android:name=".activity.DialogActivity"></activity>
     </application>
 
 </manifest>
