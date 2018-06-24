@@ -3,6 +3,7 @@
     package="com.example.jsand.jsanders22ex">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -34,7 +35,12 @@
         <activity android:name=".activity.ScaleTypeActivity" />
         <activity android:name=".activity.IntentAndBundleActivity" />
         <activity android:name=".activity.NotificationActivity" />
-        <activity android:name=".activity.AdvancedListViewActivity"></activity>
+        <activity android:name=".activity.AdvancedListViewActivity" />
+        <activity android:name=".activity.Quiz1Activity" />
+        <activity android:name=".activity.AdvancedViewPagerActivity" />
+        <activity android:name=".activity.RadioGroupActivity" />
+        <activity android:name=".activity.CheckBoxActivity" />
+        <activity android:name=".activity.DialogActivity"></activity>
     </application>
 
 </manifest>

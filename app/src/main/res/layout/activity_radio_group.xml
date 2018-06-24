@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RadioGroupActivity">
+
+    <RadioGroup
+        android:id="@+id/radio_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="RadioButton1"/>
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="RadioButton2"/>
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="RadioButton3"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/radio_group_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="26dp"
+        android:text="Submit" />
+
+</LinearLayout>

@@ -16,7 +16,6 @@ import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.AdvancedViewPagerActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
-import com.example.jsand.jsanders22ex.activity.DialogActivity;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
@@ -32,16 +31,16 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DemoFragment#newInstance} factory method to
+ * Use the {@link DemoFragment2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DemoFragment extends Fragment {
+public class DemoFragment2 extends Fragment {
 
     public List<String> list = new ArrayList<String>();
     public MainListAdapter adapter;
     private ListView listView;
 //commit test
-    public DemoFragment()
+    public DemoFragment2()
     {
         list.add("LaunchMode");
         list.add("SimpleViewPager");
@@ -56,9 +55,9 @@ public class DemoFragment extends Fragment {
         list.add("Dialogs");
     }
 
-    public static DemoFragment newInstance(String param1, String param2)
+    public static DemoFragment2 newInstance(String param1, String param2)
     {
-        DemoFragment fragment = new DemoFragment();
+        DemoFragment2 fragment = new DemoFragment2();
         return fragment;
     }
 
@@ -71,25 +70,25 @@ public class DemoFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Log.d("Fragment","DemoFragment: onStart");
+        Log.d("Fragment","DemoFragment2: onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.d("Fragment","DemoFragment: onResume");
+        Log.d("Fragment","DemoFragment2: onResume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        Log.d("Fragment","DemoFragment: onPause");
+        Log.d("Fragment","DemoFragment2: onPause");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        Log.d("Fragment","DemoFragment: onStop");
+        Log.d("Fragment","DemoFragment2: onStop");
     }
 
     @Override
@@ -150,15 +149,6 @@ public class DemoFragment extends Fragment {
                         break;
                     case 7:
                         ((MainActivity)getActivity()).startActivity(AdvancedViewPagerActivity.class);
-                        break;
-                    case 8:
-                        ((MainActivity)getActivity()).startActivity(RadioGroupActivity.class);
-                        break;
-                    case 9:
-                        ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
-                        break;
-                    case 10:
-                        ((MainActivity)getActivity()).startActivity(DialogActivity.class);
                         break;
                     default:
                 }

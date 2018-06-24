@@ -1,43 +1,33 @@
 package com.example.jsand.jsanders22ex.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.jsand.jsanders22ex.MainActivity;
 import com.example.jsand.jsanders22ex.R;
-import com.example.jsand.jsanders22ex.activity.Quiz1Activity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
-public class WorkFragment extends Fragment
+public class WorkFragment2 extends Fragment
 {
     List<String> list = new ArrayList<String>();
     MainListAdapter adapter;
     private ListView listView;
 
-    public WorkFragment()
+    public WorkFragment2()
     {
 //        list.add("Quiz1");
     }
 
-    public static WorkFragment newInstance(String param1, String param2) {
-        WorkFragment fragment = new WorkFragment();
+    public static WorkFragment2 newInstance(String param1, String param2) {
+        WorkFragment2 fragment = new WorkFragment2();
         return fragment;
     }
 
@@ -50,25 +40,25 @@ public class WorkFragment extends Fragment
     @Override
     public void onStart() {
         super.onStart();
-        Log.d("Fragment","WorkFragment: onStart");
+        Log.d("Fragment","WorkFragment2: onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Log.d("Fragment","WorkFragment: onResume");
+        Log.d("Fragment","WorkFragment2: onResume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        Log.d("Fragment","WorkFragment: onPause");
+        Log.d("Fragment","WorkFragment2: onPause");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        Log.d("Fragment","WorkFragment: onStop");
+        Log.d("Fragment","WorkFragment2: onStop");
     }
 
     @Override
