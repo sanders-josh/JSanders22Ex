@@ -10,9 +10,7 @@ import android.util.Pair;
 import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.adapter.AdvancedPagerAdapter;
 import com.example.jsand.jsanders22ex.fragment.DemoFragment;
-import com.example.jsand.jsanders22ex.fragment.DemoFragment2;
 import com.example.jsand.jsanders22ex.fragment.WorkFragment;
-import com.example.jsand.jsanders22ex.fragment.WorkFragment2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +35,8 @@ public class AdvancedViewPagerActivity extends AppCompatActivity {
 
         fragmentList.add(new Pair<String, Fragment>("First",new WorkFragment()));
         fragmentList.add(new Pair<String, Fragment>("Second", new DemoFragment()));
-        fragmentList.add(new Pair<String, Fragment>("Third", new WorkFragment2()));
-        fragmentList.add(new Pair<String, Fragment>("Fourth", new DemoFragment2()));
+        fragmentList.add(new Pair<String, Fragment>("Third", new WorkFragment()));
+        fragmentList.add(new Pair<String, Fragment>("Fourth", new DemoFragment()));
 
         AdvancedPagerAdapter adapter = new AdvancedPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(adapter);

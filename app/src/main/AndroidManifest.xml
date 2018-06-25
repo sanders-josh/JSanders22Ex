@@ -36,7 +36,6 @@
         <activity android:name=".activity.IntentAndBundleActivity" />
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.AdvancedListViewActivity" />
-        <activity android:name=".activity.Quiz1Activity" />
         <activity android:name=".activity.AdvancedViewPagerActivity" />
         <activity android:name=".activity.RadioGroupActivity" />
         <activity android:name=".activity.CheckBoxActivity" />
