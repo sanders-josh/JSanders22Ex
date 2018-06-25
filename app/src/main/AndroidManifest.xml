@@ -41,7 +41,8 @@
         <activity android:name=".activity.RadioGroupActivity" />
         <activity android:name=".activity.CheckBoxActivity" />
         <activity android:name=".activity.DialogActivity" />
-        <activity android:name=".activity.Quiz2Activity"></activity>
+        <activity android:name=".activity.Quiz2Activity" />
+        <activity android:name=".activity.HandlerActivity"></activity>
     </application>
 
 </manifest>

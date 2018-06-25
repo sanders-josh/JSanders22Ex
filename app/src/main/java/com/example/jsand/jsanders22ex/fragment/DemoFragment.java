@@ -17,6 +17,7 @@ import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.AdvancedViewPagerActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
 import com.example.jsand.jsanders22ex.activity.DialogActivity;
+import com.example.jsand.jsanders22ex.activity.HandlerActivity;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
 import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
@@ -54,6 +55,7 @@ public class DemoFragment extends Fragment {
         list.add("RadioGroup");
         list.add("CheckBox");
         list.add("Dialogs");
+        list.add("Handler");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -160,6 +162,8 @@ public class DemoFragment extends Fragment {
                     case 10:
                         ((MainActivity)getActivity()).startActivity(DialogActivity.class);
                         break;
+                    case 11:
+                        ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
                     default:
                 }
             }
