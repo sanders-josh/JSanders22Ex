@@ -151,19 +151,29 @@ public class DemoFragment extends Fragment {
                         startActivity(intent);
                         break;
                     case 7:
-                        ((MainActivity)getActivity()).startActivity(AdvancedViewPagerActivity.class);
+//                        ((MainActivity)getActivity()).startActivity(AdvancedViewPagerActivity.class);
+                        intent.setClass(getActivity(), AdvancedViewPagerActivity.class);
+                        startActivity(intent);
                         break;
                     case 8:
-                        ((MainActivity)getActivity()).startActivity(RadioGroupActivity.class);
+//                        ((MainActivity)getActivity()).startActivity(RadioGroupActivity.class);
+                        intent.setClass(getActivity(), RadioGroupActivity.class);
+                        startActivity(intent);
                         break;
                     case 9:
-                        ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
+//                        ((MainActivity)getActivity()).startActivity(CheckBoxActivity.class);
+                        intent.setClass(getActivity(), CheckBoxActivity.class);
+                        startActivity(intent);
                         break;
                     case 10:
-                        ((MainActivity)getActivity()).startActivity(DialogActivity.class);
+//                        ((MainActivity)getActivity()).startActivity(DialogActivity.class);
+                        intent.setClass(getActivity(), DialogActivity.class);
+                        startActivity(intent);
                         break;
                     case 11:
-                        ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
+//                        ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
+                        intent.setClass(getActivity(), HandlerActivity.class);
+                        startActivity(intent);
                     default:
                 }
             }
