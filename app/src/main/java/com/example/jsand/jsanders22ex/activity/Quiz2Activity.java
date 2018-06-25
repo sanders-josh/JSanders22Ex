@@ -11,7 +11,9 @@ import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.adapter.AdvancedListAdapter;
 import com.example.jsand.jsanders22ex.adapter.ViewPagerAdapter;
 import com.example.jsand.jsanders22ex.fragment.DemoFragment;
+import com.example.jsand.jsanders22ex.fragment.DemoFragment2;
 import com.example.jsand.jsanders22ex.fragment.WorkFragment;
+import com.example.jsand.jsanders22ex.fragment.WorkFragment2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,11 +53,8 @@ public class Quiz2Activity extends AppCompatActivity
 
         fragmentList.add(new DemoFragment());
         fragmentList.add(new WorkFragment());
-        fragmentList.add(new WorkFragment());
-        fragmentList.add(new WorkFragment());
-        fragmentList.add(new WorkFragment());
-        fragmentList.add(new WorkFragment());
-        fragmentList.add(new WorkFragment());
+        fragmentList.add(new DemoFragment2());
+        fragmentList.add(new WorkFragment2());
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(adapter);
