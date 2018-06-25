@@ -23,7 +23,6 @@ public class ViewPagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_view_pager);
-        setContentView(R.layout.activity_view_pager);
 
         viewPager = findViewById(R.id.viewpager_viewpager);
 

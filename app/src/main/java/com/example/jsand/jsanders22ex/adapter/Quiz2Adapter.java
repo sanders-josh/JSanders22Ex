@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.jsand.jsanders22ex.R;
@@ -37,7 +38,7 @@ public class Quiz2Adapter extends BaseAdapter
         {
             convertView = inflater.inflate(R.layout.activity_quiz2, parent,false);
         }
-        TextView textView = convertView.findViewById(R.id.activity_quiz2_textview);
-        return textView;
+        ListView listView = convertView.findViewById(R.id.activity_quiz2_listview);
+        return listView;
     }
 }

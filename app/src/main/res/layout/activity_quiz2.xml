@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.Quiz2Activity">
 
-    <TextView
-        android:id="@+id/activity_quiz2_textview"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_quiz2_viewpager"
+        android:layout_height="100dp"
+        android:layout_width="match_parent"/>
+
+    <ListView
+        android:id="@+id/activity_quiz2_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="26dp"
-        android:text="Quiz 2"/>
+        android:divider="@null">
+    </ListView>
 
-</RelativeLayout>
+</LinearLayout>
