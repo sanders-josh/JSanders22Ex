@@ -4,13 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.HandlerActivity">
+    tools:context=".activity.HandlerActivity"
+    android:paddingTop="50dp">
 
     <EditText
         android:id="@+id/handler_edittext"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:inputType="text"
+        android:cursorVisible="false"
+        android:text="20"
+        android:background="@null"/>
 
     <Button
         android:id="@+id/handler_download"

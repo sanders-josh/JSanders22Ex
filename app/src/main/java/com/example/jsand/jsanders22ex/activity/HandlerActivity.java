@@ -5,6 +5,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.jsand.jsanders22ex.R;
@@ -15,34 +16,51 @@ import butterknife.OnClick;
 
 public class HandlerActivity extends AppCompatActivity
 {
+    private Thread thread;
+
     @BindView(R.id.handler_edittext)
     EditText editText;
 
-    @OnClick
+    @BindView(R.id.handler_download)
+    Button btnDownload;
+
+    @BindView(R.id.handler_count)
+    Button btnCount;
+
+    @OnClick(R.id.handler_count)
     public void countDown(View view)
     {
+        if (btnCount.getText().toString().equals("Pause"))
+        {
+            String s = editText.getText().toString();
+            runHandler.removeCallbacks(runnable);
+            editText.setText(s);
+            btnCount.setText("Count");
+            return;
+        }
+
         runHandler.postDelayed(runnable,1000);
     }
 
     Handler downloadHandler = new Handler()
     {
-      @Override
+        @Override
         public void handleMessage(Message msg)
-      {
-          super.handleMessage(msg);
-          switch (msg.what)
-          {
-              case 1:
-                  editText.setText("Started");
-                  break;
-              case 2:
-                  editText.setText("Downloading");
-                  break;
-              case 3:
-                  editText.setText("Finished");
-                  break;
-          }
-      }
+        {
+            super.handleMessage(msg);
+            switch (msg.what)
+            {
+                case 1:
+                    btnDownload.setText("Started");
+                    break;
+                case 2:
+                    btnDownload.setText("Downloading");
+                    break;
+                case 3:
+                    btnDownload.setText("Finished");
+                    break;
+            }
+        }
     };
 
     Handler runHandler = new Handler();
@@ -52,6 +70,7 @@ public class HandlerActivity extends AppCompatActivity
         @Override
         public void run()
         {
+            btnCount.setText("Pause");
             String s = editText.getText().toString();
             int number = Integer.valueOf(s);
             if (number > 0)
@@ -59,26 +78,24 @@ public class HandlerActivity extends AppCompatActivity
                 number -= 1;
             }
             editText.setText(String.valueOf(number));
-            runHandler.postDelayed(runnable,1000);
+            runHandler.postDelayed(runnable, 1000);
         }
     };
 
     @OnClick(R.id.handler_download)
     public void download(View view)
     {
-        new Thread(new Runnable()
+        thread = new Thread(new Runnable()
         {
             @Override
             public void run()
             {
-                //cannot update UI from non-UI thread
-//                editText.setText("Start");
                 Message msg1 = new Message();
                 msg1.what = 1;
-                downloadHandler.sendMessage(msg1);
+                downloadHandler.handleMessage(msg1);
                 try
                 {
-                    Thread.sleep(3000);
+                    thread.sleep(3000);
                 }
                 catch (InterruptedException e)
                 {
@@ -86,10 +103,10 @@ public class HandlerActivity extends AppCompatActivity
                 }
                 Message msg2 = new Message();
                 msg2.what = 2;
-                downloadHandler.sendMessage(msg2);
+                downloadHandler.handleMessage(msg2);
                 try
                 {
-                    Thread.sleep(3000);
+                    thread.sleep(3000);
                 }
                 catch (InterruptedException e)
                 {
@@ -97,9 +114,10 @@ public class HandlerActivity extends AppCompatActivity
                 }
                 Message msg3 = new Message();
                 msg3.what = 3;
-                downloadHandler.sendMessage(msg3);
+                downloadHandler.handleMessage(msg3);
             }
         });
+        thread.start();
     }
 
     @Override
@@ -108,25 +126,5 @@ public class HandlerActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handler);
         ButterKnife.bind(this);
-    }
-
-    class DownloadThread extends Thread
-    {
-        @Override
-        public void run()
-        {
-            super.run();
-
-            try
-            {
-                editText.setText("Start");
-                Thread.sleep(2000);
-                editText.setText("Download");
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
     }
 }
