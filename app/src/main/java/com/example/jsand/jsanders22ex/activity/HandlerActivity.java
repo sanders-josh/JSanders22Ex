@@ -59,6 +59,9 @@ public class HandlerActivity extends AppCompatActivity
                 case 3:
                     btnDownload.setText("Finished");
                     break;
+                case 4:
+                    btnDownload.setText("Download");
+                    break;
             }
         }
     };
@@ -115,6 +118,17 @@ public class HandlerActivity extends AppCompatActivity
                 Message msg3 = new Message();
                 msg3.what = 3;
                 downloadHandler.handleMessage(msg3);
+                try
+                {
+                    thread.sleep(3000);
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                Message msg4 = new Message();
+                msg4.what = 4;
+                downloadHandler.handleMessage(msg4);
             }
         });
         thread.start();
