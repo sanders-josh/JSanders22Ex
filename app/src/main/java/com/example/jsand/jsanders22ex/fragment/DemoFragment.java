@@ -21,6 +21,7 @@ import com.example.jsand.jsanders22ex.activity.AnimationActivity;
 import com.example.jsand.jsanders22ex.activity.AnimatorActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
 import com.example.jsand.jsanders22ex.activity.DialogActivity;
+import com.example.jsand.jsanders22ex.activity.GestureActivity;
 import com.example.jsand.jsanders22ex.activity.HandlerActivity;
 import com.example.jsand.jsanders22ex.activity.IntentAndBundleActivity;
 import com.example.jsand.jsanders22ex.activity.LaunchModeActivity;
@@ -62,6 +63,7 @@ public class DemoFragment extends Fragment {
         list.add("Handler");
         list.add("Animation");
         list.add("Animator");
+        list.add("Gesture");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -188,6 +190,11 @@ public class DemoFragment extends Fragment {
                     case 13:
                         intent.setClass(getActivity(), AnimatorActivity.class);
                         startActivity(intent);
+                        break;
+                    case 14:
+                        intent.setClass(getActivity(), GestureActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                 }
             }

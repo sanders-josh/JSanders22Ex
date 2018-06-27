@@ -43,7 +43,8 @@
         <activity android:name=".activity.Quiz2Activity" />
         <activity android:name=".activity.HandlerActivity" />
         <activity android:name=".activity.AnimationActivity" />
-        <activity android:name=".activity.AnimatorActivity"></activity>
+        <activity android:name=".activity.AnimatorActivity" />
+        <activity android:name=".activity.GestureActivity"></activity>
     </application>
 
 </manifest>
