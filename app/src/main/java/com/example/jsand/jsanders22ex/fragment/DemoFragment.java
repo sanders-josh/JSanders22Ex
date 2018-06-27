@@ -18,6 +18,7 @@ import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.AdvancedViewPagerActivity;
 import com.example.jsand.jsanders22ex.activity.AnimationActivity;
+import com.example.jsand.jsanders22ex.activity.AnimatorActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
 import com.example.jsand.jsanders22ex.activity.DialogActivity;
 import com.example.jsand.jsanders22ex.activity.HandlerActivity;
@@ -60,6 +61,7 @@ public class DemoFragment extends Fragment {
         list.add("Dialogs");
         list.add("Handler");
         list.add("Animation");
+        list.add("Animator");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -183,6 +185,9 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), AnimationActivity.class);
                         startActivity(intent);
                         break;
+                    case 13:
+                        intent.setClass(getActivity(), AnimatorActivity.class);
+                        startActivity(intent);
                     default:
                 }
             }

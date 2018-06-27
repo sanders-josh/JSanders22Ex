@@ -42,7 +42,8 @@
         <activity android:name=".activity.DialogActivity" />
         <activity android:name=".activity.Quiz2Activity" />
         <activity android:name=".activity.HandlerActivity" />
-        <activity android:name=".activity.AnimationActivity"></activity>
+        <activity android:name=".activity.AnimationActivity" />
+        <activity android:name=".activity.AnimatorActivity"></activity>
     </application>
 
 </manifest>

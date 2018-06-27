@@ -60,8 +60,6 @@ public class AnimationActivity extends BaseActivity
         textView.startAnimation(setAnimation);
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -78,6 +76,5 @@ public class AnimationActivity extends BaseActivity
         rotateAnimation = AnimationUtils.loadAnimation(this,R.anim.anim_rotate);
         scaleAnimation = AnimationUtils.loadAnimation(this,R.anim.anim_scale);
         setAnimation = AnimationUtils.loadAnimation(this,R.anim.anim_set);
-
     }
 }
