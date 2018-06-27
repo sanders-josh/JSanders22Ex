@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AnimationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/activity_animation_alpha"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:textSize="16sp"
+            android:text="alpha"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/activity_animation_trans"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:textSize="16sp"
+            android:text="trans"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/activity_animation_rotate"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:textSize="16sp"
+            android:text="rotate"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/activity_animation_scale"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:textSize="16sp"
+            android:text="scale"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/activity_animation_set"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:textSize="16sp"
+            android:text="set"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_animation_textview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textSize="26sp"
+        android:layout_centerInParent="true"
+        android:text="Animation"
+        android:gravity="center"
+        android:background="@android:color/holo_blue_light"/>
+
+</RelativeLayout>

@@ -3,11 +3,13 @@ package com.example.jsand.jsanders22ex.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -15,6 +17,7 @@ import com.example.jsand.jsanders22ex.MainActivity;
 import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.AdvancedListViewActivity;
 import com.example.jsand.jsanders22ex.activity.AdvancedViewPagerActivity;
+import com.example.jsand.jsanders22ex.activity.AnimationActivity;
 import com.example.jsand.jsanders22ex.activity.CheckBoxActivity;
 import com.example.jsand.jsanders22ex.activity.DialogActivity;
 import com.example.jsand.jsanders22ex.activity.HandlerActivity;
@@ -56,6 +59,7 @@ public class DemoFragment extends Fragment {
         list.add("CheckBox");
         list.add("Dialogs");
         list.add("Handler");
+        list.add("Animation");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -174,6 +178,11 @@ public class DemoFragment extends Fragment {
 //                        ((MainActivity)getActivity()).startActivity(HandlerActivity.class);
                         intent.setClass(getActivity(), HandlerActivity.class);
                         startActivity(intent);
+                        break;
+                    case 12:
+                        intent.setClass(getActivity(), AnimationActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                 }
             }
