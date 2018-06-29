@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.jsand.jsanders22ex.R;
 import com.example.jsand.jsanders22ex.activity.Quiz2Activity;
+import com.example.jsand.jsanders22ex.activity.Quiz3Activity;
 
 public class WorkFragment extends Fragment
 {
@@ -82,6 +83,17 @@ public class WorkFragment extends Fragment
             {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), Quiz2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Quiz3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), Quiz3Activity.class);
                 startActivity(intent);
             }
         });
