@@ -29,6 +29,7 @@ import com.example.jsand.jsanders22ex.activity.NinePatchActivity;
 import com.example.jsand.jsanders22ex.activity.NotificationActivity;
 import com.example.jsand.jsanders22ex.activity.RadioGroupActivity;
 import com.example.jsand.jsanders22ex.activity.ScaleTypeActivity;
+import com.example.jsand.jsanders22ex.activity.UpdateAndResultActivity;
 import com.example.jsand.jsanders22ex.activity.ViewPagerActivity;
 import com.example.jsand.jsanders22ex.adapter.MainListAdapter;
 import com.example.jsand.jsanders22ex.bean.Base;
@@ -64,6 +65,7 @@ public class DemoFragment extends Fragment {
         list.add("Animation");
         list.add("Animator");
         list.add("Gesture");
+        list.add("ActivityUpdate&Result");
     }
 
     public static DemoFragment newInstance(String param1, String param2)
@@ -195,6 +197,9 @@ public class DemoFragment extends Fragment {
                         intent.setClass(getActivity(), GestureActivity.class);
                         startActivity(intent);
                         break;
+                    case 15:
+                        intent.setClass(getActivity(), UpdateAndResultActivity.class);
+                        startActivity(intent);
                     default:
                 }
             }

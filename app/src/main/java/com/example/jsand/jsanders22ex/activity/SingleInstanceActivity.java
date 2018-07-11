@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.example.jsand.jsanders22ex.R;
 
-public class SingleInstanceActivity extends AppCompatActivity {
+public class SingleInstanceActivity extends BaseActivity {
 
     private Button standard;
     private Button singleTop;
@@ -19,6 +19,9 @@ public class SingleInstanceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_instance);
+        Intent intent = getIntent();
+        String msg = intent.getStringExtra("MSG");
+        toastShort(msg);
 
         standard = findViewById(R.id.singleinstance_standard_button);
         singleTop = findViewById(R.id.singleinstance_singletop_button);
@@ -60,5 +63,12 @@ public class SingleInstanceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent)
+    {
+        String msg = intent.getStringExtra("MSG");
+        toastShort(msg);
     }
 }

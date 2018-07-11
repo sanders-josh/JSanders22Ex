@@ -21,7 +21,6 @@ public class GestureActivity extends BaseActivity implements View.OnTouchListene
     private GestureDetector gestureDetector;
     private int sumX=0;
     private int sumY=0;
-    private boolean isToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

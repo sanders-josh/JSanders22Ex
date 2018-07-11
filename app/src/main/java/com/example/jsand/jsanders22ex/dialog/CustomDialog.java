@@ -31,7 +31,8 @@ public class CustomDialog extends Dialog
     }
 
     @OnClick(R.id.dialog_ok)
-    public void ok(View view){
+    public void ok()
+    {
         listener.onClickListener("OK");
         dismiss();
     }

@@ -32,7 +32,7 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:textSize="26sp"
-                    android:text="Quiz1" />
+                    android:text="Quiz 1" />
 
                 <Button
                     android:id="@+id/fragment_work_quiz2_button"
@@ -41,7 +41,7 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:textSize="26sp"
-                    android:text="Quiz2"/>
+                    android:text="Quiz 2"/>
 
                 <Button
                     android:id="@+id/fragment_work_quiz3_button"
@@ -50,7 +50,7 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:textSize="26sp"
-                    android:text="Quiz3"/>
+                    android:text="Quiz 4"/>
             </LinearLayout>
 
             <Button
